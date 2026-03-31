@@ -1,5 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap");
+
 :root {
   color-scheme: dark;
+  --font-display: "Orbitron", "Arial Black", sans-serif;
+  --font-body: "Rajdhani", "Segoe UI", sans-serif;
+  --bg-void: #040812;
+  --bg-panel: rgba(8, 18, 34, 0.92);
+  --bg-panel-soft: rgba(10, 22, 42, 0.78);
+  --line-cyan: rgba(90, 190, 255, 0.34);
+  --line-blue: rgba(48, 116, 255, 0.28);
+  --text-main: #eef7ff;
+  --text-soft: #9fb6cf;
+  --accent-cyan: #6fcbff;
+  --accent-blue: #1976ff;
 }
 
 * {
@@ -14,9 +27,12 @@ body,
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #06070b;
-  color: #f4f7fb;
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at top, rgba(24, 108, 255, 0.14), transparent 26%),
+    linear-gradient(180deg, #07101d 0%, #040812 100%);
+  color: var(--text-main);
+  letter-spacing: 0.02em;
 }
 
 button,
