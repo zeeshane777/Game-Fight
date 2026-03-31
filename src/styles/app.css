@@ -536,15 +536,53 @@
 }
 
 .auth-page {
+  position: relative;
   min-height: calc(100vh - 120px);
   display: grid;
   place-items: center;
+  padding: 32px 20px;
+  overflow: hidden;
+}
+
+.auth-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(0, 136, 255, 0.16), transparent 24%),
+    radial-gradient(circle at center, rgba(0, 26, 58, 0.3), transparent 58%),
+    linear-gradient(180deg, rgba(2, 10, 22, 0.28), rgba(1, 7, 17, 0.5));
+  pointer-events: none;
 }
 
 .auth-card {
   width: min(520px, 100%);
   padding: 32px;
   border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(103, 180, 255, 0.24);
+  background:
+    linear-gradient(180deg, rgba(10, 20, 38, 0.94), rgba(5, 10, 19, 0.96)),
+    linear-gradient(135deg, rgba(0, 136, 255, 0.12), transparent 46%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 24px 60px rgba(0, 0, 0, 0.34);
+}
+
+.auth-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,0.06), transparent 24%, transparent 76%, rgba(255,255,255,0.03)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 42px);
+  pointer-events: none;
+}
+
+.auth-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .auth-card h1,
@@ -554,12 +592,32 @@
   font-size: clamp(2rem, 4vw, 3.8rem);
 }
 
+.auth-card h1 {
+  font-family: "Cinzel Decorative", "Cinzel", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: linear-gradient(135deg, #f6fbff, #bfe2ff 56%, #53a6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 18px rgba(0, 136, 255, 0.28));
+}
+
 .auth-hint,
 .selection-hint,
 .hero-panel p,
 .panel p,
 .auth-footer {
   color: #b9c3d5;
+}
+
+.auth-page .eyebrow {
+  color: #67b7ff;
+}
+
+.auth-hint strong,
+.auth-footer a {
+  color: #dff2ff;
 }
 
 .auth-form,
@@ -583,9 +641,21 @@ textarea {
   width: 100%;
   padding: 12px 14px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(108, 184, 255, 0.2);
+  background:
+    linear-gradient(180deg, rgba(10, 20, 38, 0.92), rgba(6, 13, 24, 0.96)),
+    linear-gradient(135deg, rgba(0, 136, 255, 0.06), transparent 42%);
   color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(110, 194, 255, 0.56);
+  box-shadow:
+    0 0 0 3px rgba(0, 136, 255, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .checkbox-field {
@@ -619,9 +689,17 @@ textarea {
 }
 
 .primary-button {
-  background: linear-gradient(135deg, #ff5a36, #ff8b3d);
+  background: linear-gradient(135deg, #0066cc, #0088ff);
   color: #fff;
   font-weight: 700;
+}
+
+.auth-page .primary-button {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 0;
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
 }
 
 .secondary-button,
@@ -633,6 +711,10 @@ textarea {
 .danger-button {
   background: rgba(255, 82, 82, 0.18);
   color: #ff8a8a;
+}
+
+.auth-page .auth-footer a:hover {
+  color: #67b7ff;
 }
 
 .primary-button:disabled,
