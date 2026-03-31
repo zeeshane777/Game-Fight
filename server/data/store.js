@@ -66,25 +66,9 @@ function getCharacters() {
   };
 
   const normalized = characters.map((character) => {
-    let nextCharacter = character;
-
-    if (
-      character.nom === "Guile" ||
-      (character.image &&
-        (character.image.includes("charlie.png") ||
-          character.image.includes("guile.png")))
-    ) {
-      changed = true;
-      nextCharacter = {
-        ...character,
-        nom: "Cammy",
-        image: "https://street-crescer.surge.sh/images/characters/cammy.png",
-      };
-    }
-
     return {
-      ...nextCharacter,
-      competences: nextCharacter.competences.map((skill) => {
+      ...character,
+      competences: character.competences.map((skill) => {
         const animation = inferAnimation(skill);
         if (skill.animation !== animation) {
           changed = true;

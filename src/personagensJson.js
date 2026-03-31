@@ -92,29 +92,6 @@ export default [
         ]
     },
     {
-        "id": 4,
-        "name": "Cammy",
-        "smallImg": "http://street-crescer.surge.sh/images/characters/cammy_headshot.jpg",
-        "largeImg": "http://street-crescer.surge.sh/images/characters/cammy.png",
-        "skills": [
-            {
-                "name": "Punch",
-                "damage": 5,
-                "turnsToUse": 0
-            },
-            {
-                "name": "Cannon Drill",
-                "damage": 20,
-                "turnsToUse": 2
-            },
-            {
-                "name": "Super Cannon Drill",
-                "damage": 40,
-                "turnsToUse": 5
-            }
-        ]
-    },
-    {
         "id": 5,
         "name": "Sagat",
         "smallImg": "http://street-crescer.surge.sh/images/characters/sagat_headshot.jpg",

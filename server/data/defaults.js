@@ -57,19 +57,6 @@ const DEFAULT_CHARACTERS = [
       { nom: "Senretsu storm", type: "ultime", puissance: 31, coutMana: 32, description: "Une rafale de coups legers mais devastateurs.", animation: "ultimate" }
     ],
   },
-  {
-    id: 4,
-    nom: "Cammy",
-    image: "https://street-crescer.surge.sh/images/characters/cammy.png",
-    actif: true,
-    stats: { vie: 126, attaque: 17, defense: 15, vitesse: 16, manaMax: 92 },
-    competences: [
-      { nom: "Straight hit", type: "physique", puissance: 8, coutMana: 0, description: "Un coup direct pour casser le rythme.", animation: "melee" },
-      { nom: "Sonic boom", type: "energie", puissance: 18, coutMana: 16, description: "Un projectile tranche l'air.", animation: "projectile" },
-      { nom: "Flash kick", type: "counter", puissance: 24, coutMana: 22, description: "Une riposte explosive en arc.", animation: "uppercut" },
-      { nom: "Air barrage", type: "ultime", puissance: 30, coutMana: 31, description: "Une pression continue qui use l'adversaire.", animation: "ultimate" }
-    ],
-  },
 ];
 
 module.exports = {
